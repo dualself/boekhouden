@@ -51,5 +51,6 @@ php artisan serve
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- This project theme is licensed under the MIT License - see the [LICENSE](https://github.com/BlackrockDigital/startbootstrap-resume/blob/gh-pages/LICENSE) file for details.
 
