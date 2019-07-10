@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', '- Verify')
+@section('title', '- ' . __('Account valideren'))
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

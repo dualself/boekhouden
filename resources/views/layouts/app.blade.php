@@ -47,6 +47,13 @@
                     <span>{{ __('Dashboard') }}</span></a>
             </li>
 
+                <!-- Nav Item - Receipts -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('receipt.create') }}">
+                        <i class="fas fa-fw fa-receipt"></i>
+                        <span>{{ __('Afschriften') }}</span></a>
+                </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider">
         @endauth

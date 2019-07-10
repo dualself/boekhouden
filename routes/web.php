@@ -14,3 +14,11 @@
 Auth::routes();
 
 Route::get('/', 'DashboardController@index')->name('dashboard');
+
+/**
+ * Receipts.
+ */
+Route::name('receipt.')->group(function () {
+    Route::get('/receipt/create', 'ReceiptController@create')->name('create');
+    Route::post('/receipt', 'ReceiptController@store')->name('store');
+});
