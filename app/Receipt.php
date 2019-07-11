@@ -12,7 +12,7 @@ class Receipt extends Model
      * @var array
      */
     protected $fillable = [
-        'account', 'type', 'vat_type', 'date',
+        'account', 'type', 'vat_type', 'date', 'description', 'reference',
     ];
 
     /**

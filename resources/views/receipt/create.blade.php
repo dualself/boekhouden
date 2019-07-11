@@ -43,7 +43,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="reference">{{ __('Boekstoek') }}:</label>
+                                <label for="reference">{{ __('Boekstuk') }}:</label>
                                 <input type="text" class="form-control" name="reference" maxlength="255"/>
                             </div>
 
