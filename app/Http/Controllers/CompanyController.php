@@ -58,6 +58,10 @@ class CompanyController extends Controller
         /** @var Company $company */
         $company = $user->company()->find($company->id);
 
+        if (!$company) {
+            abort(404);
+        }
+
         if ($company->getOriginal('name') != $request->get('name')) {
             $validation['name'] = 'required|max:255';
 

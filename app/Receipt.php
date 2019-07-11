@@ -14,4 +14,12 @@ class Receipt extends Model
     protected $fillable = [
         'account', 'type', 'vat_type', 'date',
     ];
+
+    /**
+     * Get the company that owns the ledger.
+     */
+    public function company()
+    {
+        return $this->belongsTo('App\Company');
+    }
 }

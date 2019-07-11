@@ -80,6 +80,8 @@ class RegisterController extends Controller
 
         $user->company()->save($company);
 
+        Company::installDefaults($company);
+
         return $user;
     }
 }

@@ -26,8 +26,8 @@
                             <div class="form-group">
                                 <label for="account">{{ __('Rekening') }}:</label>
                                 <select class="form-control" name="account" required>
-                                    @foreach ($account_types as $key => $value)
-                                        <option value="{{ $key }}">{{ $value }}</option>
+                                    @foreach ($account_types as $account_type)
+                                        <option value="{{ $account_type->id }}">{{ $account_type->description }}</option>
                                     @endforeach
                                 </select>
                             </div>

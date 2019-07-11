@@ -7,7 +7,7 @@
 
             <div class="card shadow mb-4 border-bottom-primary">
                 <div class="card-body text-center">
-                    <a href="#" class="btn btn-primary btn-icon-split btn-lg mb-2">
+                    <a href="{{ route('ledger.index') }}" class="btn btn-primary btn-icon-split btn-lg mb-2">
                         <span class="icon text-white-50">
                             <i class="fas fa-book"></i>
                         </span>

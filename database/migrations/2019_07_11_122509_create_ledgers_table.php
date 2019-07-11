@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateReceiptsTable extends Migration
+class CreateLedgersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,14 @@ class CreateReceiptsTable extends Migration
      */
     public function up()
     {
-        Schema::create('receipts', function (Blueprint $table) {
+        Schema::create('ledgers', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('company_id');
-            $table->unsignedBigInteger('account');
-            $table->string('description')->nullable();
-            $table->string('reference')->nullable();
-            $table->boolean('type');
-            $table->boolean('vat_type');
-            $table->date('date');
+            $table->unsignedInteger('code');
+            $table->string('description');
+            $table->string('category');
+            $table->boolean('active')->default(TRUE);
+            $table->unique(['company_id', 'code']);
             $table->timestamps();
         });
     }
@@ -33,6 +32,6 @@ class CreateReceiptsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('receipts');
+        Schema::dropIfExists('ledgers');
     }
 }

@@ -49,7 +49,7 @@
 
             <!-- Nav Item - Ledgers -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{ route('ledger.index') }}">
                     <i class="fas fa-fw fa-book"></i>
                     <span class="text-break">{{ __('Grootboekrekeningen') }}</span></a>
             </li>

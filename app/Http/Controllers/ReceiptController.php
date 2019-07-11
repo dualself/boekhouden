@@ -25,9 +25,12 @@ class ReceiptController extends Controller
      */
     public function create()
     {
+        /** @var User $user */
+        $user = Auth::user();
+
         $receipt_types = config('enums.receipt_types');
         $vat_types = config('enums.vat_types');
-        $account_types = [];
+        $account_types = $user->company->ledgers()->where('category', 'BET')->where('active', TRUE)->get();
 
         return view('receipt.create', compact(['receipt_types', 'account_types', 'vat_types']));
     }
@@ -59,7 +62,7 @@ class ReceiptController extends Controller
             'date' => $request->get('date'),
         ]);
 
-        $receipt->save();
+        $user->company->receipts()->save($receipt);
 
         return redirect('/');
     }
