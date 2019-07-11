@@ -11,7 +11,7 @@
                         <span class="icon text-white-50">
                             <i class="fas fa-book"></i>
                         </span>
-                        <span class="text">{{ __('Grootboekrekeningen') }}</span>
+                        <span class="text text-break">{{ __('Grootboekrekeningen') }}</span>
                     </a>
                     <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mi nec quam auctor efficitur. Mauris commodo, leo et vulputate maximus, ex sem ultrices odio, eu pretium tortor dui sit amet purus.</p>
                 </div>
@@ -26,7 +26,7 @@
                         <span class="icon text-white-50">
                             <i class="fas fa-receipt"></i>
                         </span>
-                        <span class="text">{{ __('Afschriften') }}</span>
+                        <span class="text text-break">{{ __('Afschriften') }}</span>
                     </a>
                     <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mi nec quam auctor efficitur. Mauris commodo, leo et vulputate maximus, ex sem ultrices odio, eu pretium tortor dui sit amet purus.</p>
                 </div>
@@ -41,7 +41,7 @@
                         <span class="icon text-white-50">
                             <i class="fas fa-cogs"></i>
                         </span>
-                        <span class="text">{{ __('Instellingen') }}</span>
+                        <span class="text text-break">{{ __('Instellingen') }}</span>
                     </a>
                     <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mi nec quam auctor efficitur. Mauris commodo, leo et vulputate maximus, ex sem ultrices odio, eu pretium tortor dui sit amet purus.</p>
                 </div>

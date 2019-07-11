@@ -44,15 +44,22 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('dashboard') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>{{ __('Dashboard') }}</span></a>
+                    <span class="text-break">{{ __('Dashboard') }}</span></a>
             </li>
 
-                <!-- Nav Item - Receipts -->
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('receipt.create') }}">
-                        <i class="fas fa-fw fa-receipt"></i>
-                        <span>{{ __('Afschriften') }}</span></a>
-                </li>
+            <!-- Nav Item - Ledgers -->
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-book"></i>
+                    <span class="text-break">{{ __('Grootboekrekeningen') }}</span></a>
+            </li>
+
+            <!-- Nav Item - Receipts -->
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('receipt.create') }}">
+                    <i class="fas fa-fw fa-receipt"></i>
+                    <span class="text-break">{{ __('Afschriften') }}</span></a>
+            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
