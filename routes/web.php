@@ -22,3 +22,11 @@ Route::name('receipt.')->group(function () {
     Route::get('/receipt/create', 'ReceiptController@create')->name('create');
     Route::post('/receipt', 'ReceiptController@store')->name('store');
 });
+
+/**
+ * Company.
+ */
+Route::name('company.')->group(function () {
+    Route::get('/company/{company}/edit', 'CompanyController@edit')->name('edit');
+    Route::patch('/company/{company}', 'CompanyController@update')->name('update');
+});

@@ -111,7 +111,7 @@
                                         <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                         {{ __('Instellingen') }}
                                     </a>
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="{{ route('company.edit', Auth::user()->company->id) }}">
                                         <i class="fas fa-building fa-sm fa-fw mr-2 text-gray-400"></i>
                                         {{ __('Bedrijf') }}
                                     </a>

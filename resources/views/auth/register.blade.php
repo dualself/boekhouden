@@ -40,6 +40,26 @@
                         </div>
 
                         <div class="form-group row">
+                            <input id="company_name" type="text" class="form-control form-control-user @error('company_name') is-invalid @enderror" name="company_name" value="{{ old('company_name') }}" required autocomplete="company_name" autofocus placeholder="{{ __('Bedrijfsnaam') }}">
+
+                            @error('company_name')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+
+                        <div class="form-group row">
+                            <input id="company_coc_number" type="text" class="form-control form-control-user @error('company_coc_number') is-invalid @enderror" name="company_coc_number" value="{{ old('company_coc_number') }}" required autocomplete="company_coc_number" size="8" maxlength="8" autofocus placeholder="{{ __('KVK-nummer') }}">
+
+                            @error('company_coc_number')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+
+                        <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
