@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Ledger extends Model
 {
@@ -49,5 +50,15 @@ class Ledger extends Model
     public function company()
     {
         return $this->belongsTo('App\Company');
+    }
+
+    /**
+     * Get the receipts for the ledger.
+     *
+     * @return HasMany
+     */
+    public function receipts()
+    {
+        return $this->hasMany('App\Receipt');
     }
 }

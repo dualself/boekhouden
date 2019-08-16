@@ -40,6 +40,16 @@ class Company extends Model
     }
 
     /**
+     * Get active payment ledgers.
+     *
+     * @return HasMany
+     */
+    public function getActivePaymentLedgers()
+    {
+        return $this->ledgers()->where('category', 'BET')->where('active', TRUE);
+    }
+
+    /**
      * Installs defaults.
      *
      * @param \App\Company $company
