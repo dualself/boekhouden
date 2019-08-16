@@ -78,6 +78,6 @@ class CompanyController extends Controller
 
         $company->save();
 
-        return redirect('/');
+        return redirect()->route('company.edit', [$company->id])->with('success', __('Bedrijfsgegevens zijn succesvol aangepast!'));
     }
 }

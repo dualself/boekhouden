@@ -79,7 +79,8 @@ class LedgerController extends Controller
         ]);
 
         $user->company->ledgers()->save($ledger);
-        return redirect('/');
+
+        return redirect()->route('ledger.index')->with('success', __('Grootboek is succesvol aangemaakt!'));
     }
 
     /**
@@ -158,7 +159,7 @@ class LedgerController extends Controller
 
         $ledger->save();
 
-        return redirect('/');
+        return redirect()->route('ledger.edit', [$ledger->id])->with('success', __('Grootboek is succesvol aangepast!'));
     }
 
     /**
@@ -182,7 +183,7 @@ class LedgerController extends Controller
 
         $ledger->delete();
 
-        return redirect('/');
+        return redirect()->route('ledger.index')->with('success', __('Grootboek is succesvol verwijderd!'));
     }
 
 }
