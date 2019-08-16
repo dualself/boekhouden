@@ -22,7 +22,7 @@
 
             <div class="card shadow mb-4 border-bottom-success">
                 <div class="card-body text-center">
-                    <a href="{{ route('receipt.create') }}" class="btn btn-success btn-icon-split btn-lg mb-2">
+                    <a href="{{ route('receipt.index') }}" class="btn btn-success btn-icon-split btn-lg mb-2">
                         <span class="icon text-white-50">
                             <i class="fas fa-receipt"></i>
                         </span>

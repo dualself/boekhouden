@@ -19,8 +19,12 @@ Route::get('/', 'DashboardController@index')->name('dashboard');
  * Receipts.
  */
 Route::name('receipt.')->group(function () {
+    Route::get('/receipt', 'ReceiptController@index')->name('index');
     Route::get('/receipt/create', 'ReceiptController@create')->name('create');
+    Route::get('/receipt/{receipt}/edit', 'ReceiptController@edit')->name('edit');
+    Route::get('/receipt/{receipt}/delete', 'ReceiptController@destroy')->name('destroy');
     Route::post('/receipt', 'ReceiptController@store')->name('store');
+    Route::patch('/receipt/{receipt}', 'ReceiptController@update')->name('update');
 });
 
 /**

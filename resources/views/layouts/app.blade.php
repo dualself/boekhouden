@@ -56,7 +56,7 @@
 
             <!-- Nav Item - Receipts -->
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('receipt.create') }}">
+                <a class="nav-link" href="{{ route('receipt.index') }}">
                     <i class="fas fa-fw fa-receipt"></i>
                     <span class="text-break">{{ __('Afschriften') }}</span></a>
             </li>
@@ -160,14 +160,14 @@
                                 @endif
 
                                 @if ($errors->any())
-                                    <div class="alert alert-danger alert-dismissible">
-                                        @foreach ($errors->all() as $error)
-                                            <p>{{ $error }}</p>
-                                        @endforeach
-                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
+                                    @foreach ($errors->all() as $error)
+                                        <div class="alert alert-danger alert-dismissible">
+                                            {{ $error }}
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                    @endforeach
                                 @endif
                             </div>
                         </div>
